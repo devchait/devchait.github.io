@@ -13,6 +13,7 @@ class Human:
         body_mark=None,
         signature_scans=None,
         date_of_birth=None,
+        name=None,
     ):
         self.gender = gender
         self.physic = physic
@@ -23,9 +24,10 @@ class Human:
         self.education = education
         self.contact_number = contact_number
         self.body_mark = body_mark
-        self.id = identity
+        self.identity = identity
         self.signature_scans = signature_scans
         self.date_of_birth = date_of_birth
+        self.name = name
 
     def __str__(self):
         return (
@@ -45,12 +47,14 @@ class Human:
             + self.education
             + " concat_number= "
             + self.contact_number
-            + "Id= "
-            + self.id
+            + "identity= "
+            + self.identity
             + "body_mark="
             + self.body_mark
             + "signature_scans="
             + self.signature_scans
             + "date_of_birth="
             + self.date_of_birth
+            + "name="
+            + self.name
         )
