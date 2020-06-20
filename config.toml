@@ -1,4 +1,72 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "Python Samples D-A: Designs to Aritifical Intelligence"
+title = "Python Samples"
 theme = "hyde-hyde"
+
+## Hugo Built-in Features
+# disqusShortname = "your-disqus-shortname"
+# googleAnalytics = "your-google-analytics-id"
+# enableRobotsTXT = true
+
+# summarylength = 30
+
+#paginate = 5
+
+## Site Settings
+[params]
+    author = "Chaitanya Khire"
+    title = "AI/ML Engineer"
+    # description = "..."
+    authorimage = "/img/devchait.jpg"
+    dateformat = "June 20, 2020"
+
+    # sidebar, copyright & license
+    copyright = "htr3n"
+    since = 2019
+    license = "CC BY-SA 4.0"
+    licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
+    showBuiltWith = true
+
+    # https://highlightjs.org
+    highlightjs = true
+    highlightjsstyle = "github"
+    
+    # please choose either GraphComment or Disqus or Utterances
+    #GraphCommentId = "..."
+    #UtterancesRepo = "..." # https://utteranc.es/
+    #UtterancesIssueTerm = "..." # pathname, url, title, og:title
+    #UtterancesTheme = "..." # github-light or github-dark
+
+    # Table of contents
+    #toc = none, "hugo", or "tocbot"
+
+## Social Accounts
+[params.social]
+    github = "devchait"
+    #instagram = ""
+    #xing = "<username>"
+    linkedin = "devchait"
+    #twitter = "<username>"
+    #facebook = "<username>"
+    stackoverflow = "8074788/chaitanya-khire"
+    #telegram = "<username>"
+    # orcid = "<xxxx-xxxx-xxxx-xxxx>"
+    email = "devchait@gmail.com"
+    # gravatar = "your-email@example.com"
+
+## Main Menu
+[[menu.main]]
+    name = "Posts"
+    weight = 100
+    identifier = "posts"
+    url = "/content/post/design-patterns/builder-pattern"
+[[menu.main]]
+    name = "Portfolio"
+    identifier = "portfolio"
+    weight = 200
+    url = "/portfolio/"
+[[menu.main]]
+    name = "About"
+    identifier = "about"
+    weight = 300
+    url = "/about/"

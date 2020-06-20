@@ -15,46 +15,46 @@ class Human:
         date_of_birth=None,
         name=None,
     ):
-        self.gender = gender
-        self.physic = physic
-        self.financial_status = financial_status
-        self.occupation = occupation
-        self.iq = iq
-        self.hobbies = hobbies
-        self.education = education
-        self.contact_number = contact_number
-        self.body_mark = body_mark
-        self.identity = identity
-        self.signature_scans = signature_scans
-        self.date_of_birth = date_of_birth
-        self.name = name
+        self.__gender__ = gender
+        self.__physic__ = physic
+        self.__financial_status__ = financial_status
+        self.__occupation__ = occupation
+        self.__iq__ = iq
+        self.__hobbies__ = hobbies
+        self.__education__ = education
+        self.__contact_number__ = contact_number
+        self.__body_mark__ = body_mark
+        self.__identity__ = identity
+        self.__signature_scans__ = signature_scans
+        self.__date_of_birth__ = date_of_birth
+        self.__name__ = name
 
     def __str__(self):
         return (
             "gender ="
-            + self.gender
+            + self.__gender__
             + "physic="
-            + self.physic
+            + self.__physic__
             + "financial status="
-            + self.financial_status
+            + self.__financial_status__
             + "occupation ="
-            + self.occupation
+            + self.__occupation__
             + "iq="
-            + self.iq
+            + self.__iq__
             + "hobbies ="
-            + self.hobbies
+            + self.__hobbies__
             + "education="
-            + self.education
+            + self.__education__
             + " concat_number= "
-            + self.contact_number
+            + self.__contact_number__
             + "identity= "
-            + self.identity
+            + self.__identity__
             + "body_mark="
-            + self.body_mark
+            + self.__body_mark__
             + "signature_scans="
-            + self.signature_scans
+            + self.__signature_scans__
             + "date_of_birth="
-            + self.date_of_birth
+            + self.__date_of_birth__
             + "name="
-            + self.name
+            + self.__name__
         )
