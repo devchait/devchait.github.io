@@ -14,7 +14,7 @@ Let us start from attributes of human being:
     
 When we say human being we visualize some attributes. Like gender, address, physic, financial status, occupation, IQ, hobbies, education, contact number, ID, body mark, signature and so on.
 
-Below is the basic Human Class which could be found in the [human.py](src/com/samples/oop/human.py)
+Below is the basic Human Class which could be found in the [human.py](/src/com/samples/oop/human.py)
 
 ```
 class Human:
@@ -98,20 +98,23 @@ The above structure is a class which is a file with name human.py. After initali
 In order to print the details of our object using print statement we have overwrite a str().This is also known as string representation of object. So now our class is like this. Now on printing the object we get this:
 As I said earlier a memory location wherein all these values are saved is the object. So let us see how
 
-> id(tony_stark)
+> 
+    id(tony_stark)
+    139989539594592
 
-
-and whatever is stored in memory to access it our run-time environment must know what structure it is of. So our runtime libs which manages these access must know the kind of memory in order to read it appropriately. To know the type of the object
+and whatever is stored in memory to access it our run-time environment must know what structure it is of. So our runtime libs which manages these storage must know the kind of object in order to read it appropriately. To know the type of the object
 
 > type(tony_stark)
 
+<class 'oop.human.Human'>
+
 Now let us dig into some other details of design. As you could see assigning all values to this human class while initializing is hectic. We need to gather so many values during initialization. Let us consider an example, where we are getting individual value of 1000 humans in a loop that too 1 value at a time, then how we will initialize the object. As seen above all variables are public and we don’t need getter setter thus we can access any property anywhere as shown here
 
-> tony_stark = Human()
+> 
+    tony_stark = Human()
+    tony_stark.gender = gender
 
-> tony_stark.gender = gender
-
-The flaw here is we need our property value public. What if our values are not public. Then we will either need setter getter or below is another approach.One thing we can do is save all values and then initialize the object. To avoid these situation a better solution is the builder design. This we use when there are too many properties and we are getting values few at one time and rest at other. So the builder pattern for this is given in [human_builder.py](src/com/samples/oop/human_builder.py):
+The flaw here is we need our property value public. What if our values are not public. Then we will either need setter getter or below is another approach.One thing we can do is save all values and then initialize the object. To avoid these situation a better solution is the builder design. This we use when there are too many properties and we are getting values few at one time and rest at other. So the builder pattern for this is given in [human_builder.py](/src/com/samples/oop/human_builder.py):
 ``` 
 class HumanBuilder(Object):
     def __init__():
@@ -198,7 +201,7 @@ maria_stark = Maria_Stark_Builder()
 maria_stark_builder.name(‘Maria Stark’).gender(‘Female')
 ```
 
-As you may have notice there is one major thing lacking here and that is the relations between the humans. Accepting the facts provided by the Science Humans are born from Humans. So how shall we present the relationships. How to answer this question. As we all know the word relation means association with some one. So it obviously requires atleast two same subjects. In our case it is humans. In every relation both associates has some role to play. So we must know the role of the human in that relation. Let us assume all roles in binary relation are left to right. For example to represent relation below could be the code found in [relation.py](src/com/samples/oop/relation/relation.py):
+As you may have notice there is one major thing lacking here and that is the relations between the humans. Accepting the facts provided by the Science Humans are born from Humans. So how shall we present the relationships. How to answer this question. As we all know the word relation means association with some one. So it obviously requires atleast two same subjects. In our case it is humans. In every relation both associates has some role to play. So we must know the role of the human in that relation. Let us assume all roles in binary relation are left to right. For example to represent relation below could be the code found in [relation.py](/src/com/samples/oop/relation/relation.py):
 
 ```
 class Relation(Object):
@@ -209,7 +212,7 @@ class Relation(Object):
     def relation():
         return {"left_entity": self.left_entity, "right_entity": self.right_entity}
 ```
-For Husband Wife relation. It is [here](src/com/samples/oop/relation/husband_wife.py)
+For Husband Wife relation. It is [here](/src/com/samples/oop/relation/husband_wife.py)
 ```
 class HusbandWife(Relation):
     def __init__(husband=None, wife=None):
@@ -229,4 +232,7 @@ class HusbandWife(Relation):
 ```
 So using our relationship we can use it for our above human example as follows:
 
-> stark_husban_wife = HusbandWife(husband=,wife=)    
+> 
+    stark_husband_wife = HusbandWife(howard_stark, maria_stark)
+    type(stark_husband_wife)
+    <class 'oop.relation.husband_wife.HusbandWife'>
