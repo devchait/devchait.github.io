@@ -1,5 +1,4 @@
 baseURL = "https://python-samples.github.io/"
-languageCode = "en-us"
 title = "Python Samples"
 theme = "hyde-hyde"
 
