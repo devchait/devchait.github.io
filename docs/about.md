@@ -1,4 +1,0 @@
-## About Me..
-I am software enthusiast, intrested in Artificial Intelligence, Neural Network, Big Data, Computer Vision and desiging products. I had implemented good researched ideas/algorithm that had improved the performance of the product. I belive no new technology could be built without the efficient software engineering skills (Design Patterns, Algorithm, Data Structure, Maths and Language knowledge), rest everything is just wrapper or API's making life easy.
-
-This is not whole of me: I love trekking, writing poems, cooking, bike riding. Practicing the yoga, reading self help books, gardening and playing badminton and obviously...the Family...it is and... that's why every possibility..!!! 
