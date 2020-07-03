@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.58.2" />
+
+    
+    
+    
+
+<title>Builder Pattern • Python Samples</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Builder Pattern"/>
+<meta name="twitter:description" content="Builder Pattern: Building human objects Let us assume a scenario where in we want to develop a system to store details of all Humans on the earth. Let us start quickly from simpler things without wasting much time in what we are going to do. Here I will be gradually creating a system similar to the marvel universe. Starting from very first entity known to all of us the human-beings on Earth."/>
+
+<meta property="og:title" content="Builder Pattern" />
+<meta property="og:description" content="Builder Pattern: Building human objects Let us assume a scenario where in we want to develop a system to store details of all Humans on the earth. Let us start quickly from simpler things without wasting much time in what we are going to do. Here I will be gradually creating a system similar to the marvel universe. Starting from very first entity known to all of us the human-beings on Earth." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/post/design-patterns/builder-pattern/" />
+<meta property="article:published_time" content="2020-06-20T10:34:06+05:30" />
+<meta property="article:modified_time" content="2020-06-20T10:34:06+05:30" /><meta property="og:site_name" content="AI/ML Engineer" />
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.9181f25ed2263aeb878ec6f8a84f10c4ebb16150000fca8767308880bdde5ca0.css" integrity="sha256-kYHyXtImOuuHjsb4qE8QxOuxYVAAD8qHZzCIgL3eXKA=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="http://example.org/">Python Samples</a>
+      </span>
+      
+        
+        
+        
+        <div class="author-image">
+          <img src="http://example.org/img/devchait.jpg" alt="Author Image" class="img--circle img--headshot element--center">
+        </div>
+        
+      
+      
+      <p class="site__description">
+        
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Python Samples</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/post/design-patterns/builder-pattern">
+						<span>Posts</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	
+	
+	<a href="https://github.com/devchait" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/devchait" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/8074788/chaitanya-khire" rel="me"><i class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	<a href="mailto:devchait@gmail.com" rel="me"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
+	
+</section>
+
+      </div>
+    </div>
+    
+<div class="copyright">
+  &copy; 2019 - 2020 htr3n
+  
+    <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>
+  
+</div>
+
+
+<div class="builtwith">
+Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.com/htr3n/hyde-hyde">hyde-hyde</a>.
+</div>
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>Builder Pattern</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> June 200, 20200
+    
+    
+    
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 6 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    
+
+<h1 id="builder-pattern-building-human-objects">Builder Pattern: Building human objects</h1>
+
+<p>Let us assume a scenario where in we want to develop a system to store details of all <strong>Humans</strong> on the earth. Let us start quickly from simpler things without wasting much time in what we are going to do. Here I will be gradually creating a system similar to the marvel universe. Starting from very first entity known to all of us <strong>the human-beings</strong> on <strong>Earth</strong>. I have decided to go with python for this. I will start with very basic requirement of our trageted system and will implement it using suitable design pattern. While trying to keep the overall design clean and <strong>SOLID</strong> we may need to restructure many things as and when required. This is my attempt to explore most of the python paradigm starting from OOPs then moving towards many fascinating concepts.</p>
+
+<blockquote>
+<p>This blog focuses on basic design pattern the Builder Pattern in python.</p>
+</blockquote>
+
+<p>Let us start from attributes of human being:</p>
+
+<p>When we say human being we visualize some attributes. Like gender, address, physic, financial status, occupation, IQ, hobbies, education, contact number, ID, body mark, signature and so on.</p>
+
+<p>Below is the basic Human Class which could be found in the <a href="/src/com/samples/oop/human.py">human.py</a></p>
+
+<pre><code>class Human:
+    def __init__(
+        self,
+        gender=None,
+        physic=None,
+        financial_status=None,
+        occupation=None,
+        iq=None,
+        hobbies=None,
+        education=None,
+        contact_number=None,
+        identity=None,
+        body_mark=None,
+        signature_scans=None,
+        date_of_birth=None,
+        name=None,
+    ):
+        self.gender = gender
+        self.physic = physic
+        self.financial_status = financial_status
+        self.occupation = occupation
+        self.iq = iq
+        self.hobbies = hobbies
+        self.education = education
+        self.contact_number = contact_number
+        self.body_mark = body_mark
+        self.identity = identity
+        self.signature_scans = signature_scans
+        self.date_of_birth = date_of_birth
+        self.name = name
+
+    def __str__(self):
+        return (
+            &quot;gender =&quot;
+            + self.gender
+            + &quot;physic=&quot;
+            + self.physic
+            + &quot;financial status=&quot;
+            + self.financial_status
+            + &quot;occupation =&quot;
+            + self.occupation
+            + &quot;iq=&quot;
+            + self.iq
+            + &quot;hobbies =&quot;
+            + self.hobbies
+            + &quot;education=&quot;
+            + self.education
+            + &quot; concat_number= &quot;
+            + self.contact_number
+            + &quot;identity= &quot;
+            + self.identity
+            + &quot;body_mark=&quot;
+            + self.body_mark
+            + &quot;signature_scans=&quot;
+            + self.signature_scans
+            + &quot;date_of_birth=&quot;
+            + self.date_of_birth
+            + &quot;name=&quot;
+            + self.name
+        )
+</code></pre>
+
+<p>The above structure is a class which is a file with name human.py. After initalizing the object of this class, memory is allocated from the RAM. Whenever system wants to access this block of memory it needs its definition. For which it refers to its type which in our case is class.Let us initialize the human class.</p>
+
+<pre><code>    tony_stark = Human(gender ='Male',
+    physic='5.4ft 100 lbs brown hair blue eyes', 
+    financial status='very rich',
+    occupation ='scientist weapon business', 
+    iq = '300', 
+    hobbies ='reading discovering', 
+    education= 'phd', 
+    concat_number= '', 
+    Id= 'ASO4389504', 
+    body_mark='heat_light', 
+    signature_scans='eye', 
+    date_of_birth=&quot;may 29th, 1970&quot;)
+</code></pre>
+
+<p>In order to print the details of our object using print statement we have overwrite a str().This is also known as string representation of object. So now our class is like this. Now on printing the object we get this:
+As I said earlier a memory location wherein all these values are saved is the object. So let us see how</p>
+
+<blockquote>
+<pre><code>id(tony_stark)
+139989539594592
+</code></pre>
+</blockquote>
+
+<p>and whatever is stored in memory to access it our run-time environment must know what structure it is of. So our runtime libs which manages these storage must know the kind of object in order to read it appropriately. To know the type of the object</p>
+
+<blockquote>
+<p>type(tony_stark)</p>
+</blockquote>
+
+<p><class 'oop.human.Human'></p>
+
+<p>Now let us dig into some other details of design. As you could see assigning all values to this human class while initializing is hectic. We need to gather so many values during initialization. Let us consider an example, where we are getting individual value of 1000 humans in a loop that too 1 value at a time, then how we will initialize the object. As seen above all variables are public and we don’t need getter setter thus we can access any property anywhere as shown here</p>
+
+<blockquote>
+<pre><code>tony_stark = Human()
+tony_stark.gender = gender
+</code></pre>
+</blockquote>
+
+<p>The flaw here is we need our property value public. What if our values are not public. Then we will either need setter getter or below is another approach.One thing we can do is save all values and then initialize the object. To avoid these situation a better solution is the builder design. This we use when there are too many properties and we are getting values few at one time and rest at other. So the builder pattern for this is given in <a href="/src/com/samples/oop/human_builder.py">human_builder.py</a>:</p>
+
+<pre><code>class HumanBuilder(Object):
+    def __init__():
+        pass
+
+    def name(self, name):
+        self.__name = name
+        return self
+
+    def gender(self, gender):
+        self.__gender = gender
+        return self
+
+    def physic(self, physic):
+        self.__physic = physic
+        return self
+
+    def financial_status(self, financial_status):
+        self.__financial_status = financial_status
+        return self
+
+    def occupation(self, occupation):
+        self.__occupation = occupation
+        return self
+
+    def iq(self, iq):
+        self.__iq = iq
+        return self
+
+    def hobbies(self, hobbies):
+        self.__hobbies = hobbies
+        return self
+
+    def education(self, education):
+        self.__education = education
+        return self
+
+    def contact_number(self, contact_number):
+        self.__contact_number = contact_number
+        return self
+
+    def identity(self, identity):
+        self.__identity = identity
+        return self
+
+    def body_mark(self, body_mark):
+        self.__body_mark = body_mark
+        return self
+
+    def signature_scans(self, signature_scans):
+        self.__signature_scans = signature_scans
+        return self
+
+    def date_of_birth(self, date_of_birth):
+        self.__date_of_birth = date_of_birth
+        return self
+
+    def build()
+        human = human(gender = self.__gender,
+        name= self.__name, physic = self.__physic,
+        financial_status = self.financial_status,
+        occupation = self.__occupation, iq = self.iq,
+        hobbies = self.__hobbies,
+        education= self.__education,
+        contact_number = self.__contact_number,
+        Id = self.__id,
+        body_mark = self.__body_mark,
+        signature_scans = self.__signature_scans,
+        date_of_birth = self.__date_of_birth)
+        return human
+</code></pre>
+
+<p>As you may have noticed that the HumanBuilder is not as per the PEP8‘s suggestions but our Human object is. So the purpose of builder is accomplished without disturbing the PEP8 with respect to our object Human.
+Let us go ahead and create some humans:</p>
+
+<pre><code>tony_stark_builder = HumanBuilder()
+human_builder.name(‘Tony Stark”’)
+             .gender(‘Male’)
+             .
+             .
+             .
+howard_stark = howard_stark_builder()
+howard_stark.name(‘Howard Stark’).gender(‘Male’).occupation(‘’)
+maria_stark = Maria_Stark_Builder()
+maria_stark_builder.name(‘Maria Stark’).gender(‘Female')
+</code></pre>
+
+<p>As you may have notice there is one major thing lacking here and that is the relations between the humans. Accepting the facts provided by the Science Humans are born from Humans. So how shall we present the relationships. How to answer this question. As we all know the word relation means association with some one. So it obviously requires atleast two same subjects. In our case it is humans. In every relation both associates has some role to play. So we must know the role of the human in that relation. Let us assume all roles in binary relation are left to right. For example to represent relation below could be the code found in <a href="/src/com/samples/oop/relation/relation.py">relation.py</a>:</p>
+
+<pre><code>class Relation(Object):
+    def __init__(left_entity=None, right_entity=None):
+        self.left_entity = left_entity
+        self.right_entity = right_entity
+
+    def relation():
+        return {&quot;left_entity&quot;: self.left_entity, &quot;right_entity&quot;: self.right_entity}
+</code></pre>
+
+<p>For Husband Wife relation. It is <a href="/src/com/samples/oop/relation/husband_wife.py">here</a></p>
+
+<pre><code>class HusbandWife(Relation):
+    def __init__(husband=None, wife=None):
+        if isinstance(husband, &quot;Human&quot;) and isinstance(wife, &quot;Human&quot;):
+            super().__init__(left_entity=husband, right_entity=wife)
+        else:
+            print(&quot;husband and wife must belong to same entity type&quot;)
+
+    def husband():
+        return self.left_entity
+
+    def wife():
+        return self.wife
+
+    def relation():
+        return {&quot;husband&quot;: self.left_entity, &quot;wife&quot;: self.right_entity}
+</code></pre>
+
+<p>So using our relationship we can use it for our above human example as follows:</p>
+
+<blockquote>
+<pre><code>stark_husband_wife = HusbandWife(howard_stark, maria_stark)
+type(stark_husband_wife)
+&lt;class 'oop.relation.husband_wife.HusbandWife'&gt;
+</code></pre>
+</blockquote>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    
+</div>
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+    
+
+
+
+    </body>
+</html>
