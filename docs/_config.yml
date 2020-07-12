@@ -1,4 +1,3 @@
 name: Python-Samples
 markdown: kramdown
-theme: jekyll-theme-merlot
 permalink: /docs/blog/:year/:month/:day/:title
