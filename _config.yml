@@ -1,1 +1,4 @@
+name: Python-Samples
+markdown: kramdown
 theme: jekyll-theme-dinky
+permalink: /docs/blog/:year/:month/:day/:title
