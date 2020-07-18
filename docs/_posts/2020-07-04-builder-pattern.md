@@ -16,7 +16,7 @@ When we say human being we visualize some attributes. Like gender, address, phys
 
 Below is the basic Human Class which could be found in the [human.py](/src/com/samples/oop/human.py)
 
-```
+```python
 class Human:
     def __init__(
         self,
@@ -80,7 +80,7 @@ class Human:
 ```
 The above structure is a class which is a file with name human.py. After initalizing the object of this class, memory is allocated from the RAM. Whenever system wants to access this block of memory it needs its definition. For which it refers to its type which in our case is class.Let us initialize the human class.
 
-```
+```python
     tony_stark = Human(gender ='Male',
     physic='5.4ft 100 lbs brown hair blue eyes', 
     financial status='very rich',
@@ -104,9 +104,9 @@ As I said earlier a memory location wherein all these values are saved is the ob
 
 and whatever is stored in memory to access it our run-time environment must know what structure it is of. So our runtime libs which manages these storage must know the kind of object in order to read it appropriately. To know the type of the object
 
-> type(tony_stark)
-
-<class 'oop.human.Human'>
+> 
+    type(tony_stark)
+    <class 'oop.human.Human'>
 
 Now let us dig into some other details of design. As you could see assigning all values to this human class while initializing is hectic. We need to gather so many values during initialization. Let us consider an example, where we are getting individual value of 1000 humans in a loop that too 1 value at a time, then how we will initialize the object. As seen above all variables are public and we don’t need getter setter thus we can access any property anywhere as shown here
 
@@ -115,7 +115,7 @@ Now let us dig into some other details of design. As you could see assigning all
     tony_stark.gender = gender
 
 The flaw here is we need our property value public. What if our values are not public. Then we will either need setter getter or below is another approach.One thing we can do is save all values and then initialize the object. To avoid these situation a better solution is the builder design. This we use when there are too many properties and we are getting values few at one time and rest at other. So the builder pattern for this is given in [human_builder.py](/src/com/samples/oop/human_builder.py):
-``` 
+``` python
 class HumanBuilder(Object):
     def __init__():
         pass
@@ -187,23 +187,27 @@ class HumanBuilder(Object):
         return human
 ```
 As you may have noticed that the HumanBuilder is not as per the PEP8‘s suggestions but our Human object is. So the purpose of builder is accomplished without disturbing the PEP8 with respect to our object Human.
-Let us go ahead and create some humans:
-```
-tony_stark_builder = HumanBuilder()
-human_builder.name(‘Tony Stark”’)
-             .gender(‘Male’)
-             .
-             .
-             .
-howard_stark = howard_stark_builder()
-howard_stark.name(‘Howard Stark’).gender(‘Male’).occupation(‘’)
-maria_stark = Maria_Stark_Builder()
-maria_stark_builder.name(‘Maria Stark’).gender(‘Female')
+Let us go ahead and create some humans.
+
+``` python
+    tony_stark_builder = HumanBuilder()
+    tony_stark_builder.name('Tony Stark')
+                .gender('Male')
+                .
+                .
+                .
+    howard_stark = howard_stark_builder()
+    howard_stark.name('Howard Stark')
+                .gender('Male')
+                .occupation('')
+    maria_stark = Maria_Stark_Builder()
+    maria_stark_builder.name('Maria Stark')
+                       .gender('Female')
 ```
 
 As you may have notice there is one major thing lacking here and that is the relations between the humans. Accepting the facts provided by the Science Humans are born from Humans. So how shall we present the relationships. How to answer this question. As we all know the word relation means association with some one. So it obviously requires atleast two same subjects. In our case it is humans. In every relation both associates has some role to play. So we must know the role of the human in that relation. Let us assume all roles in binary relation are left to right. For example to represent relation below could be the code found in [relation.py](/src/com/samples/oop/relation/relation.py):
 
-```
+``` python
 class Relation(Object):
     def __init__(left_entity=None, right_entity=None):
         self.left_entity = left_entity
@@ -213,7 +217,7 @@ class Relation(Object):
         return {"left_entity": self.left_entity, "right_entity": self.right_entity}
 ```
 For Husband Wife relation. It is [here](/src/com/samples/oop/relation/husband_wife.py)
-```
+``` python
 class HusbandWife(Relation):
     def __init__(husband=None, wife=None):
         if isinstance(husband, "Human") and isinstance(wife, "Human"):
