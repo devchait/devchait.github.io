@@ -24,8 +24,8 @@ h1 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 p {
-    font-size: 1.5em;
-    line-height: 1.4em;
+    font-size: 1.3em;
+    line-height: 1em;
     color: #333;
 }
 footer {
@@ -42,8 +42,16 @@ ul.posts li {
     list-style: none;
 }
 blockquote {
-  color: #00855d;
+  color: #85081b;
   margin-bottom: 20px;
   padding: 0 0 0 20px;
   border-left: 3px solid #bbb;
+  background: #8fb4bd;
+}
+
+code {
+  padding: 3px;
+  margin: 0 3px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  background: #8fb4bd;
 }
