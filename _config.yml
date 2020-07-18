@@ -1,8 +1,10 @@
-name: Python-Samples
-markdown: kramdown
-permalink: /docs/blog/:year/:month/:day/:title
-# Includes an icon in the footer for each user name you enter
+title: Python and C++ Samples
+description: Python and C++ Samples
+google_analytics: 
+theme: jekyll-theme-cayman
 footer-links:
   github: devchait
+permalink: /docs/blog/:year/:month/:day/:title
+github_comments_repository: devchait.github.io
 
 
