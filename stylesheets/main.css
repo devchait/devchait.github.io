@@ -15,7 +15,8 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #999;
+    font-weight: bold;
+    color: #263137;
 }
 a:hover {
     text-decoration: underline;
@@ -50,12 +51,12 @@ blockquote {
   padding: 0 0 0 5px;
   border-left: 2px solid #85081b;
   background: #263137;
-  font-size: .6em;
+  font-size: 1.2em;
 }
 
 code {
   color: #c66900;
-  font-size: .6em;
+  font-size: 1.2em;
   padding: 4px;
   margin: 0 3px;
   display: block;
