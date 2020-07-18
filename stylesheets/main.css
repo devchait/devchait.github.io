@@ -42,18 +42,19 @@ ul.posts li {
     list-style: none;
 }
 blockquote {
-  color: #85081b;
+  color: #c66900;
   margin-bottom: 10px;
   padding: 0 0 0 5px;
   border-left: 2px solid #85081b;
-  background: #8fb4bd;
+  background: #263137;
 }
 
 code {
+  color: #c66900;
   padding: 4px;
   margin: 0 3px;
   display: block;
-  background: #8fb4bd;
+  background: #263137;
   border: 2px solid;
   box-shadow: 4px 5px #85081b;
 
