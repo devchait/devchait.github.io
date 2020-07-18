@@ -45,7 +45,16 @@ blockquote {
   color: #85081b;
   margin-bottom: 20px;
   padding: 0 0 0 20px;
+  display: block;
   border-left: 3px solid #bbb;
   background: #8fb4bd;
 }
 
+code {
+  padding: 3px;
+  margin: 0 3px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  display: block;
+  background: #8fb4bd;
+
+}
