@@ -4,6 +4,7 @@ makrdown: kramdown
 google_analytics: G-PP1WS30XD2
 footer-links:
   github: devchait
+  linkdein: https://www.linkedin.com/in/chaitanya-khire-7b35419a
 permalink: /docs/blog/:year/:month/:day/:title
 github_comments_repository: devchait.github.io
 
