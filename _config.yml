@@ -1,3 +1,8 @@
 name: Python-Samples
 markdown: kramdown
 permalink: /docs/blog/:year/:month/:day/:title
+# Includes an icon in the footer for each user name you enter
+footer-links:
+  github: devchait
+
+
