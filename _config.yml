@@ -1,6 +1,8 @@
 title: Python and C++ Samples
 description: Python and C++ Samples
-makrdown:
+makrdown: Kramdown
+highlighter: rouge
+Kramdown:
   coderay_line_number_start: 1
   coderay_line_numbers: true
   enable_coderay: true
