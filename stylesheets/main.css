@@ -44,7 +44,7 @@ ul.posts li {
 blockquote {
   color: #85081b;
   margin-bottom: 10px;
-  padding: 0 0 0 10px;
+  padding: 0 0 0 20px;
   border-left: 2px solid #85081b;
   background: #8fb4bd;
 }
@@ -53,7 +53,6 @@ code {
   padding: 4px;
   margin: 0 3px;
   display: block;
-  background: #8fb4bd;
   border: 1px solid;
   box-shadow: 4px 5px #85081b;
 
