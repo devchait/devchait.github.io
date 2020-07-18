@@ -1,6 +1,7 @@
 body {
     margin: 60px auto;
     width: 70%;
+    
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -27,6 +28,8 @@ p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
+    text-align: justify;
+    text-justify: inter-word;
 }
 footer {
     border-top: 1px solid #d5d5d5;
@@ -47,10 +50,12 @@ blockquote {
   padding: 0 0 0 5px;
   border-left: 2px solid #85081b;
   background: #263137;
+  font-size: .6em;
 }
 
 code {
   color: #c66900;
+  font-size: .6em;
   padding: 4px;
   margin: 0 3px;
   display: block;
