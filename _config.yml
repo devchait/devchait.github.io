@@ -1,10 +1,10 @@
 title: Python and C++ Samples
 description: Python and C++ Samples
 google_analytics: 
-theme: jekyll-theme-cayman
 footer-links:
   github: devchait
 permalink: /docs/blog/:year/:month/:day/:title
 github_comments_repository: devchait.github.io
+fenced_code_blocks: true
 
 
