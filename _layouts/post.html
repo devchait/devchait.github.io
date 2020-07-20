@@ -7,13 +7,48 @@ layout: default
 <div class="post">
   {{ content }}
 <div class="discusion">
-<script src="https://utteranc.es/client.js"
-        repo="devchait.github.io"
-        issue-term="title"
-        label="comments"
-        crossorigin="anonymous"
-        async>
-</script>
-</div>
-</div>
+<form class="comment" accept-charset="UTF-8" action="javascript:">
+        <header class="new-comment-header tabnav">
+          <div class="tabnav-tabs" role="tablist">
+            <button type="button" class="tabnav-tab tab-write" role="tab" aria-selected="true">
+              Write
+            </button>
+            <button type="button" class="tabnav-tab tab-preview" role="tab">
+              Preview
+            </button>
+          </div>
+        </header>
+        <div class="comment-body">
+          <textarea class="form-control" placeholder="Sign in to comment" aria-label="comment" disabled=""></textarea>
+          <div class="markdown-body" style="display: none">
+            Nothing to preview
+          </div>
+        </div>
+          <button class="btn btn-primary" type="submit" hidden="" disabled="">Comment</button>
+          <a class="btn btn-primary" href="https://api.utteranc.es/authorize?redirect_uri=https%3A%2F%2Fdanyow.net%2Fusing-github-issues-for-blog-comments%2F" target="_top">Sign in to comment</a>
+      </form>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-59973368-2', 'auto');
+  ga('send', 'pageview');
+  
+</script>
+
+<script>
+  (function() {
+      if (location.pathname === '/') {
+      	return;
+      }
+      var main = document.querySelector('main');
+      var script = document.createElement('script');
+      script.src='https://utteranc.es/client.js'
+      script.setAttribute('repo', 'devchait/devchait.github.io');
+      script.setAttribute('issue-term', 'title');
+      main.appendChild(script);
+  })();  
+</script></div>
+</div>
