@@ -51,5 +51,10 @@ width="20"
 height="20"/></a></li>
 </ul>
 			</footer>
+<div class="disscuss">
+{% if page.comments_id %}
+			{% include comments.html %}
+		{% endif %}
+</div>
 		</body>
 	</html>
