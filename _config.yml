@@ -7,7 +7,7 @@ footer-links:
   linkedin: https://www.linkedin.com/in/chaitanya-khire-7b35419a
 permalink: /docs/blog/:year/:month/:day/:title
 github_comments_repository: devchait.github.io
-plugins:
+gems:
   - jekyll-sitemap
 
 
