@@ -8,8 +8,6 @@ date: 2020-07-04
 
 Let us assume a scenario where in we want to develop a system to store details of all **Humans** on the earth. Let us start quickly from simpler things without wasting much time in what we are going to do. Here I will be gradually creating a system similar to the marvel universe. Starting from very first entity known to all of us **the human-beings** on **Earth**. I have decided to go with python for this. I will start with very basic requirement of our trageted system and will implement it using suitable design pattern. While trying to keep the overall design clean and **SOLID** we may need to restructure many things as and when required. This is my attempt to explore most of the python paradigm starting from OOPs then moving towards many fascinating concepts.
 
-> This blog focuses on basic design pattern the Builder Pattern in python.
-
 Let us start from attributes of human being:
     
 When we say human being we visualize some attributes. Like gender, address, physic, financial status, occupation, IQ, hobbies, education, contact number, ID, body mark, signature and so on.
