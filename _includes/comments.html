@@ -27,6 +27,8 @@ function createCommentEl( response ) {
 	let userAvatar = document.createElement( 'img' );
 	userAvatar.classList.add( 'avatar' );
 	userAvatar.setAttribute( 'src', response.user.avatar_url );
+	userAvatar.setAttribute('width', '50px');
+	userAvatar.setAttribute('height', '50px');
 
 	user.appendChild( userAvatar );
 
