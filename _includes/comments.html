@@ -1,5 +1,5 @@
 <script>
-const GH_API_URL = 'https://github.com/devchait/devchait.github.io/issues/1/comments?client_id={{ site.data.settings.gh_api.ci }}&client_secret={{ site.data.settings.gh_api.cs }}';
+const GH_API_URL = 'https://api.github.com/repos/devchait/devchait.github.io/issues/1/comments';
 
 let request = new XMLHttpRequest();
 request.open( 'GET', GH_API_URL, true );
@@ -58,6 +58,5 @@ request.send();
 <div class="github-comments">
 	<h2>Comments</h2>
 	<ul id="gh-comments-list"></ul>
-	<p id="no-comments-found">No comments found for this article. </p>
 	<p id="leave-a-comment">Join the discussion for this article on <a href="https://github.com/devchait/devchait.github.io/issues/1">this ticket</a>. Comments appear on this page instantly.</p>
 </div>
